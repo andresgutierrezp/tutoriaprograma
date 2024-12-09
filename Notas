@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std; 
+
+int main()
+{
+   char nota;
+   cout<<"Cual es la nota: ";
+   cin>>nota;
+   switch(nota){
+       case 'A': 
+         cout<<"Nota Excelente";
+         break;
+       case 'B':
+          cout<<"Nota Buena";
+          break;
+       case 'D':
+         cout<<"Nota Mala";
+         break; 
+       default:
+         cout<<"Opcion equivocada";
+   }
+    return 0;
+}
