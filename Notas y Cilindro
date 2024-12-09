@@ -1,0 +1,54 @@
+#include <iostream>
+#include <math.h>
+using namespace std; 
+
+float vol_cilindro (float r, float a)
+   {float v= 3.1416*r*r*a;
+   return v;  }
+ 
+void PedirNotas(char nota){
+   switch(nota){
+       case 'A': 
+         cout<<"Nota Excelente";
+         break;
+       case 'B':
+          cout<<"Nota Buena";
+          break;
+       case 'D':
+         cout<<"Nota Mala";
+         break; 
+       default:
+         cout<<"Opcion equivocada";
+   }
+}
+ int main() {
+    int Opcion;
+    float radio, altura, volumen;
+    char nota;
+    do{
+        cout<<"--Menu--"<<endl<<endl;
+        cout<<"1. Notas "<<endl;
+        cout<<"2. Area cilindro "<<endl;
+        cout<<"Salir del programa "<<endl;
+        cout<<"Ingrese una opcion "<<endl;
+        cin>>Opcion;
+        switch (Opcion){
+            case 1:
+               cout<<"Ingrese la nota: ";
+               cin>>nota;
+               PedirNotas(nota);
+               break;
+            case 2: 
+               cout<<"Ingrese el radio: "; cin>>radio;
+               cout<<"Ingrese la altura : "; cin>>altura;
+               volumen=vol_cilindro(radio,altura);
+               cout<<"el volumen es: "<<volumen<<endl;
+               break; 
+            case 0:
+               cout<<"Opcion equivocada"<<endl;
+            default:
+            cout<<"ERROR"<<endl;
+        }
+    } while (Opcion != 0);
+    return 0;
+}
